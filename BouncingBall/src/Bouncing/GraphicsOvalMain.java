@@ -53,12 +53,13 @@ public class GraphicsOvalMain extends JFrame{
 	
 	public static	JTextField scoreCounter = new JTextField(""+ scoreCount);
     JPanel	contentPane = new JPanel();
+    
 	GraphicsOvalMain(){
-		scoreCounter.setText(""+ scoreCounter);
+		//scoreCounter.setText(""+ scoreCounter);
 	}
 	
 	public void setCounter(int score){
-		
+		scoreCounter.setText(""+ scoreCounter);
 	}
 	
 	public void initCOmponent(){
@@ -190,7 +191,7 @@ public class GraphicsOvalMain extends JFrame{
 			   
 			   //scoreCounter.setText(""+ scoreCount);
 				
-			   System.out.println("\t\t\t\t"+xPos);
+			   //System.out.println("\t\t\t\t"+xPos);
 			   gh.setXpos(e.getX());
 			     stant.setBounds(xPos , 460, 150, 30);
 		   }
@@ -227,12 +228,11 @@ public class GraphicsOvalMain extends JFrame{
 		//	UIManager.setLookAndFeel(new FastLookAndFeel());
 		//	UIManager.setLookAndFeel(new GraphiteLookAndFeel());
 		//	UIManager.setLookAndFeel(new LunaLookAndFeel());
-		//	UIManager.setLookAndFeel(new McWinLookAndFeel());
+			UIManager.setLookAndFeel(new McWinLookAndFeel());
 		//	UIManager.setLookAndFeel(new MintLookAndFeel());
-			UIManager.setLookAndFeel(new NoireLookAndFeel());
+		//	UIManager.setLookAndFeel(new NoireLookAndFeel());
 		//	UIManager.setLookAndFeel(new SmartLookAndFeel());
 		//	UIManager.setLookAndFeel(new TextureLookAndFeel());
-			//UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
 			
 		} catch (Exception e1) {
 			e1.printStackTrace();

@@ -41,10 +41,9 @@ public class GraphicsOval extends JPanel implements Runnable{
 				try {
 					Thread.sleep(20);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println(vecBooleanX.get(i) +"  "+ vecX.get(i));	
+				//System.out.println(vecBooleanX.get(i) +"  "+ vecX.get(i));	
 			}
 		
 		for(int i = 0; i< vecX.size(); i++){
@@ -62,7 +61,7 @@ public class GraphicsOval extends JPanel implements Runnable{
 			timeSpeedUp++;
 			this.checkValidation();
 			
-			System.out.println(vecBooleanY.size()-1);
+			//System.out.println(vecBooleanY.size()-1);
 			
 			for(int i= 0 ; i <= vecY.size() - 1; i++){
 				if(vecBooleanX.get(i) == 0)
@@ -98,19 +97,20 @@ public class GraphicsOval extends JPanel implements Runnable{
 			if(vecY.get(i) == 0){
 				vecBooleanY.set(i, 0);
 				vecY.set(i, vecY.get(i)+3);
-				System.out.println("Hiii");
+				//System.out.println("Hiii");
 			}
 			else if(vecX.get(i) >= (xPos-20) && vecX.get(i) <=  xPos+150 && vecY.get(i) == (480-(height+10))){
-				vecBooleanY.set(i, 1);    System.out.println("OOOW");
+				vecBooleanY.set(i, 1);    
+				//System.out.println("OOOW");
 				
 				setScore++;
-			//	graphicsOvalMain.setCounter(setScore);
+				//graphicsOvalMain.setCounter(setScore);
 				GraphicsOvalMain.scoreCounter.setText(""+setScore);
 			}
 			
 			if(vecX.get(i) == (480 -width)){
 				vecBooleanX.set(i, 1);
-				System.out.println("harder");
+				//System.out.println("harder");
 			}
 			
 			else if(vecX.get(i) == 0)
@@ -118,7 +118,7 @@ public class GraphicsOval extends JPanel implements Runnable{
 			
 			if(vecX.get(i) <  xPos-20 && vecY.get(i) == 480){
 				
-				System.out.println( vecX.get(i)+ "  Hi  "+ new GraphicsOvalMain().getxPos()+ "   "+vecY.get(i) + "  " +((480-(height+10))));
+				//System.out.println( vecX.get(i)+ "  Hi  "+ new GraphicsOvalMain().getxPos()+ "   "+vecY.get(i) + "  " +((480-(height+10))));
 				vecX.remove(i);
 				vecY.remove(i);
 				vecBooleanX.remove(i);
@@ -127,7 +127,7 @@ public class GraphicsOval extends JPanel implements Runnable{
 			
 			else if(vecX.get(i) > (xPos+150) && vecY.get(i) == 480)
 			{
-				System.out.println( vecX.get(i)+ "  Hello  "+ (xPos +150)+  "   " +vecY.get(i) + "  " +((480-height)));
+				//System.out.println( vecX.get(i)+ "  Hello  "+ (xPos +150)+  "   " +vecY.get(i) + "  " +((480-height)));
 				vecX.remove(i);
 				vecY.remove(i);
 				vecBooleanX.remove(i);
