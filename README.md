@@ -1,4 +1,4 @@
 # BouncingBall
-It is a bouncing ball game developed in java. 
+BouncingBall is a simple PC game developed in java programming language using java swing. The concept of developing this game was taken from DX-Ball game. 
 
-There are still some features need to develop in this game. 
+There are still some features need to develop in this game. IT was just the output of playing with java swing. 
